@@ -1,0 +1,47 @@
+{
+  "name": "ui-library",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start-native": "yarn prestorybook && expo start",
+    "start-web": "start-storybook -p 6006",
+    "android": "yarn prestorybook && expo start --android",
+    "ios": "yarn prestorybook && expo start --ios",
+    "web": "yarn prestorybook && expo start --web",
+    "prestorybook": "rnstl",
+    "eject": "expo eject",
+    "build-storybook": "build-storybook"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./stories"
+      ],
+      "pattern": "**/*.stories.native.tsx",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "dependencies": {
+    "expo": "~44.0.0",
+    "expo-status-bar": "~1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@expo/webpack-config": "^0.16.16",
+    "@storybook/addon-actions": "^6.4.14",
+    "@storybook/addon-essentials": "^6.4.14",
+    "@storybook/addon-links": "^6.4.14",
+    "@storybook/react": "^6.4.14",
+    "@storybook/react-native": "^5.3.25",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "babel-loader": "^8.2.3",
+    "react-native-storybook-loader": "^2.0.5",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}
